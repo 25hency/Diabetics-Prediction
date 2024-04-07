@@ -8,7 +8,7 @@ from sklearn import metrics
 from sklearn.metrics import classification_report
 
 #reading the dataset
-diabetes_df = pd.read_csv('C:\\Users\Hency\\Downloads\\diabetes.csv')
+diabetes_df = pd.read_csv('diabetes.csv')
 
 #counting the zeros with the NAN values
 diabetes_df_copy = diabetes_df.copy(deep = True)
