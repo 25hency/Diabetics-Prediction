@@ -89,7 +89,10 @@ rfc_from_pickle.predict(X_test)
 
 # rfc.predict([[0,137,40,35,168,43.1,2.228,33]]) 5th patient
 
-if rfc.predict([[6, 148, 72, 35, 0, 33.6, 0.627, 50]]) == 1:
-  print("diabetic")
+input_data = pd.DataFrame([[6, 148, 72, 35, 0, 33.6, 0.627, 50]], 
+                          columns=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'])
+
+if rfc.predict(input_data) == 1:
+    print("diabetic")
 else:
-  print("not diabetic")
+    print("not diabetic")
